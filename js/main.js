@@ -16,6 +16,7 @@ btnSapXep.onclick = function () {
     var so3 = Number(txtSo3.value);
 
     // Xử lý:
+    // Hoán đổi vị trí 3 số sao cho số thứ 1 <= số thứ 2 <= số thứ 3
     var temp;
     if (so1 > so2) {
         temp = so1;
@@ -52,7 +53,8 @@ var txtLoiChao = document.getElementById("txtLoiChao");
 btnGuiLoiChao.onclick = function () {
     // Đầu vào: Lấy input từ người dùng
     var thanhVien = slChonThanhVien.value;
-    // Xử lý
+    // Xử lý: 
+    // Chọn thành viên trong danh sách các option
     var loiChao = "Xin chào " + thanhVien;
     // Đầu ra: Hiển thị kết quả
     txtLoiChao.value = loiChao;
@@ -75,7 +77,10 @@ btnDemChanLe.onclick = function () {
     var so2 = Number(txtSoThu2.value);
     var so3 = Number(txtSoThu3.value);
 
-    // Xử lý
+    // Xử lý:
+    // Biến chan đếm các giá trị chẵn
+    // Nếu số chia hết cho 2 thì chan++
+    // Số lẻ = 3 - chan
     var chan = 0;
     if (so1 % 2 === 0) chan++;
     if (so2 % 2 === 0) chan++;
